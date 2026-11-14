@@ -87,12 +87,12 @@ python -m unittest discover -s tests -v
 Lima skenario endpoint `/ask` yang diuji:
 
 | Skenario | Query | Intent/hasil yang diharapkan | 
-|---|---|---|---|
+|---|---|---|
 | FAQ cuti | `Berapa jatah cuti tahunan karyawan tetap?` | `faq`, jawaban menyebut 12 hari | 
 | FAQ VPN | `Bagaimana cara reset password VPN?` | `faq`, jawaban tentang portal self-service | 
 | Tiket tersedia | `Cek status TICKET-0001` | `ticket_status`, status `Selesai` | 
 | Tiket tidak tersedia | `Cek status TICKET-9999` | `ticket_status`, tiket tidak ditemukan | 
-| Di luar cakupan | `Siapa juara Piala Dunia?` | `unknown`, permintaan tidak dipahami | Tidak 
+| Di luar cakupan | `Siapa juara Piala Dunia?` | `unknown`, permintaan tidak dipahami |
 
 
 Contoh request manual:
