@@ -60,11 +60,13 @@ requirements.txt
 PowerShell:
 
 ```powershell
-.env.example .env
+if (-not (Test-Path .env)) { Copy-Item .env.example .env }
 python -m pip install -r requirements.txt
 uvicorn app.main:app --reload
 ```
- `http://localhost:8000/docs`.
+
+Buka `http://localhost:8000/docs` untuk mencoba API melalui Swagger UI.
+Pastikan `GEMINI_API_KEY` sudah diisi di file `.env`.
 
 
 ## Menjalankan dengan Docker
@@ -99,7 +101,8 @@ Contoh request manual:
 
 ```powershell
 curl.exe -X POST http://localhost:8000/ask `
- 
+  -H "Content-Type: application/json" `
+  -d '{"query":"Cek status TICKET-0001"}'
 ```
 
 
